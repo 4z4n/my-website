@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Celestials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Section Styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        section {
+            width: 100%;
+            max-width: 900px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #2980b9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-align: justify;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .logo img {
+            display: none;
+            width: 30%;
+            height: auto;
+        }
+
+        /* WhatsApp Link Styling */
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            section p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <section>
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="{{ url_for('static', filename='azan.png') }}" alt="Celestials Logo"> <!-- Ganti dengan logo asli Anda -->
+            </div>
+
+            <h2>Welcome to Celestials</h2>
+            <p>
+                At Celestials, we are dedicated to creating products that embody innovation and quality. Our goal is to bring unique and thoughtful creations that inspire creativity and spark imagination. From our humble beginnings to where we are now, we believe that excellence is at the core of everything we do.
+            </p>
+            <p>
+                Whether you're looking for something special for yourself or a gift for someone else, Celestials is here to offer you premium products that will enrich your lifestyle. Our team works tirelessly to deliver not just products, but experiences that resonate with our customers.
+            </p>
+
+            <!-- WhatsApp Contact Link -->
+            <a href="https://wa.me/6285869113850" class="whatsapp-link" target="_blank">Chat with Us on WhatsApp</a>
+        </section>
+    </div>
+
+</body>
+</html>

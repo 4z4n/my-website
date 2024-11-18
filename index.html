@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestials Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: #000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f0a500;
+    }
+
+    /* Responsive Nav for Mobile */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background-color: #000;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        display: none;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    /* Main Content */
+    .content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    .content p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Responsive Nav for Mobile */
+/* Responsive Nav for Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    align-items: center;
+    flex-direction: column; /* Navigasi menjadi vertikal */
+    background-color: rgba(0, 0, 0, 0.444); /* Latar hitam transparan */
+    backdrop-filter: blur(8px); /* Efek buram */
+    padding: 10px 0; /* Memberikan ruang pada bagian atas dan bawah */
+    position: absolute;
+    top: 55px;
+    left: 0; /* Posisi mulai dari paling kiri */
+    width: 100%; /* Lebar penuh layar */
+    display: none; /* Tersembunyi awalnya */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.519);
+  }
+
+  nav ul.show {
+    display: flex; /* Muncul saat toggle diaktifkan */
+    animation: fadeIn 0.3s ease; /* Animasi muncul */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+/* Animasi Muncul */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animasi Muncul */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Celestials</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="/blogs">Blog</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>  
+
+  <!-- Main Content -->
+  <div class="content">
+    <img src="{{ url_for('static', filename='celestials.png') }}" alt="Celestials Hoodie">
+    <h1>Welcome to the Celestials Blog</h1>
+    <p>
+      Discover our latest fashion trends and insights. Stay connected for updates on 
+      unique designs, styling tips, and much more. This hoodie represents a seamless blend of comfort and elegance.
+    </p>
+  </div>
+
+  <script>
+    // Toggle navigation for mobile
+    function toggleMenu() {
+      const navLinks = document.querySelector('nav ul');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

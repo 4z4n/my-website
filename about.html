@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Celestials</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+        /* Header Styling */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Section Styling */
+        section {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.304);
+            font-family: 'Georgia', serif;
+        }
+
+        section h2 {
+            color: #2c2d2d;
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            letter-spacing: 0.5px;
+        }
+
+        /* Text shadow for paragraphs */
+        section p {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+      background-color: #000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f0a500;
+    }
+
+        @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+    align-items: center;
+    flex-direction: column; /* Navigasi menjadi vertikal */
+    background-color: rgba(0, 0, 0, 0.444); /* Latar hitam transparan */
+    backdrop-filter: blur(8px); /* Efek buram */
+    padding: 10px 0; /* Memberikan ruang pada bagian atas dan bawah */
+    position: absolute;
+    top: 55px;
+    left: 0; /* Posisi mulai dari paling kiri */
+    width: 100%; /* Lebar penuh layar */
+    display: none; /* Tersembunyi awalnya */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.519);
+  }
+
+  nav ul.show {
+    display: flex; /* Muncul saat toggle diaktifkan */
+    animation: fadeIn 0.3s ease; /* Animasi muncul */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }
+            h1 {
+                font-size: 2.5em;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1.1em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Animasi Muncul */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Celestials</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blogs">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>  
+    <header>
+        <h1>About Celestials</h1>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <p>Welcome to Celestials! We're a brand that blends the elegance of the cosmos with the sophistication of modern design. Our products are crafted to bring a touch of the celestial into your everyday life.</p>
+        </section>
+
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>At Celestials, we are dedicated to creating products that inspire wonder and evoke the beauty of the universe. Our mission is to connect people with the magic of the stars through high-quality, aesthetically pleasing products.</p>
+        </section>
+
+        <section class="product-description">
+            <h2>Our Products</h2>
+            <p>Celestials offers a wide range of products, from luxurious jewelry inspired by constellations to home décor that mirrors the serenity of the night sky. Each product is designed with attention to detail, ensuring that you carry a piece of the cosmos wherever you go.</p>
+        </section>
+    </div>
+
+    <script>
+        // Toggle navigation for mobile
+        function toggleMenu() {
+          const navLinks = document.querySelector('nav ul');
+          navLinks.classList.toggle('show');
+        }
+      </script>
+</body>
+</html>
